@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { getFilteredFoods } from "../store/reducers/selectors";
+import { connect } from 'react-redux';
+import { getFilteredFoods } from '../store/reducers/selectors';
 import Food from '../components/food/Food';
 import EmptyGrid from '../components/food/EmptyGrid';
-import ScrollToTop from "react-scroll-up";
+import ScrollToTop from 'react-scroll-up';
 
 class Foods extends Component {
   render() {
@@ -12,13 +12,13 @@ class Foods extends Component {
         {
           this.props.foods && this.props.foods.length >= 1 ? 
           <div className="grid">
-              {
-                this.props.foods.map(food => (
-                  <li key={ food.ndbno } >
-                    <Food food={ food } />
-                  </li>
-                ))
-              }
+            {
+              this.props.foods.map(food => (
+                <li key={ food.ndbno }>
+                  <Food food={ food } />
+                </li>
+              ))
+            }
           </div> :
           <EmptyGrid />
         }

@@ -12,6 +12,7 @@ export function fetchFoods(params) {
       }));
     
       if (!response.ok) throw new Error(`fetchFoods Failed, HTTP status ${ response.status }`);
+      
       const foods = await response.json();
       dispatch({ type: FILTER_FOODS, foods });
     } catch (error) {

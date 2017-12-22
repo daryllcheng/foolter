@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { fetchFoods } from "../store/actions/foods_action";
-import { getFilteredFoods } from "../store/reducers/selectors";
-import Slider from 'rc-slider';
+import { connect } from 'react-redux';
+import { fetchFoods } from '../store/actions/foods_action';
+import { getFilteredFoods } from '../store/reducers/selectors';
 import 'rc-slider/assets/index.css';
+import Slider from 'rc-slider';
 import Steps from '../components/search/Steps';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
@@ -38,7 +38,7 @@ class Search extends Component {
           Object.keys(this.state).map(nutrient => (
             <div key={ nutrient }>
               <div className="slider">
-                <p className="sliderLabel">{ `${ nutrient.charAt(0).toUpperCase() + nutrient.slice(1) }` }</p>
+                <p className="sliderLabel">{ nutrient.charAt(0).toUpperCase() + nutrient.slice(1) }</p>
                 <img src={ `assets/icons/${ nutrient }.png` } alt="nutrientIcon" />
               </div>
               <Range allowCross={ false } value={ this.state[nutrient] } onChange={ (value) => { 
@@ -62,7 +62,7 @@ class Search extends Component {
           <i className="fas fa-search pulsate"></i>
         </a>
         <div className="matches">
-          <p>{ this.props.foods.length > 0 ? `Total Matches: ${ this.props.foods.length } ` : `No Matches` } </p>
+          <p>{ this.props.foods.length > 0 ? `Total Matches: ${ this.props.foods.length } ` : "No Matches" }</p>
         </div>
       </div>
     )

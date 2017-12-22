@@ -18,7 +18,7 @@ class Steps extends Component {
           <StepLabel style={ style }>Click on search to confirm</StepLabel>
         </Step>
         <Step active={ true }>
-          <StepLabel style={ style }>Browse all available matches</StepLabel>
+          <StepLabel style={ style }>Browse through available matches</StepLabel>
         </Step>
       </Stepper>
     )

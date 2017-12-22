@@ -1,18 +1,9 @@
-.app {
-  li {
-    list-style: none;
-  }
-  
+.app {  
   font-family: $nunito;
   color: $dark;
 
   .pulsate {
     @include pulsate;
     cursor: pointer;
-  }
-
-  .steps {
-    font-family: $neuton;
-    color: $dark;
   }
 }
