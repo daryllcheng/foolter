@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
-import data from './data/food_data.json';
+import { data } from './data/data.js';
 import filterFoodsByNutrients from './utilities/helpers';
 
 const app = express();
